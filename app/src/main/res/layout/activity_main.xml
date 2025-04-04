@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="154dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#E3F2FD">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top news for you"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/bg"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#E3F2FD"
+        app:elevation="15dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/bg"
+        app:itemPaddingTop="15dp"
+        app:menu="@menu/nav" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/nav_view"
+        android:layout_alignParentRight="true"
+
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchfield"
+                android:elevation="5dp"
+                android:background="@drawable/searchbar"
+                android:paddingLeft="5dp"
+                android:drawableTint="@color/black"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="5dp"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="10dp"
+                android:hint="search"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black" />
+            <ImageButton
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/searchbtn"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_search_24"
+                android:layout_marginTop="5dp"
+                android:layout_width="50dp"
+                android:background="#00000000"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textColor="@color/bg"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:text="category"
+            android:textSize="25sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/bg"/>
+        <FrameLayout
+            android:id="@+id/fragmentcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
